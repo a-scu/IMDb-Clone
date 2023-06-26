@@ -8,10 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        imdb_yellow: "var(--imdb-yellow)",
+        imdb: "var(--imdb)",
         light_gray: "var(--light-gray)",
         light_hover: "var(--light-hover)",
         dark_gray: "var(--dark-gray)",
+        dark_contrast: "var(--dark-contrast)",
         dark_hover: "var(--dark-hover)",
       },
     },

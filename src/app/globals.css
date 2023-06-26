@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --imdb-yellow: #e2b616;
+  --imdb: #f5c518;
   --light-gray:#d8d8d8;
   --light-hover: #c5c5c5;
   --dark-gray: #121212;
+  --dark-contrast: #000;
   --dark-hover:#252525;
 }
