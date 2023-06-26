@@ -11,6 +11,7 @@ module.exports = {
         imdb: "var(--imdb)",
         light_gray: "var(--light-gray)",
         light_hover: "var(--light-hover)",
+        light_contrast: "var(--light-contrast)",
         dark_gray: "var(--dark-gray)",
         dark_contrast: "var(--dark-contrast)",
         dark_hover: "var(--dark-hover)",

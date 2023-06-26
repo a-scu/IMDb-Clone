@@ -5,7 +5,7 @@ const About = () => {
     <div className="max-w-[1048px] mx-auto px-3 py-3 flex items-start justify-center gap-3 flex-col">
       <h2 className="text-xl text-imdb font-bold mt-8">About</h2>
 
-      <p>
+      <p className="font-medium">
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and

@@ -24,14 +24,14 @@ const DarkModeSwitch = () => {
           onClick={() => setTheme("light")}
           className="flex items-center justify-center h-8 bg-dark_contrast hover:bg-dark_hover px-3 rounded-[.2rem] cursor-pointer text-white transition-colors duration-300 ease"
         >
-          <MdLightMode />
+          <MdDarkMode className="text-imdb" />
         </li>
       ) : mounted && currentTheme !== "dark" ? (
         <li
           onClick={() => setTheme("dark")}
           className="flex items-center justify-center h-8 bg-dark_contrast hover:bg-dark_hover px-3 rounded-[.2rem] cursor-pointer text-white transition-colors duration-300 ease"
         >
-          <MdDarkMode />
+          <MdLightMode className="text-imdb" />
         </li>
       ) : (
         <></>
