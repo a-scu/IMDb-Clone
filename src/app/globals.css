@@ -11,3 +11,17 @@
   --dark-contrast: #101010;
   --dark-hover:#282828;
 }
+
+html::-webkit-scrollbar {
+  width: 12px;
+}
+
+html::-webkit-scrollbar-track {
+  background:  var(--dark-hover)
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--dark-contrast);
+  border-radius: .2rem;
+  border:2px solid var(--dark-hover)
+}
