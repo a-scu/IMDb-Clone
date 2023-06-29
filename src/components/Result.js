@@ -10,7 +10,7 @@ const Result = ({ result }) => {
     <Link
       href={`/movie/${result.id}`}
       key={result.id}
-      className="cursor-pointer rounded-[.2rem] overflow-hidden duration-300 bg-dark_contrast group min-h-[225px] h-full flex flex-col w-full"
+      className="cursor-pointer rounded-[.2rem] overflow-hidden transition-colors duration-300 hover:bg-dark_hover ease bg-dark_contrast group min-h-[225px] h-full flex flex-col w-full"
     >
       <Image
         width={500}
@@ -19,10 +19,9 @@ const Result = ({ result }) => {
           result.backdrop_path || result.poster_path
         }`}
         placeholder="blur"
-        blurDataURL="/loading.svg"
-        style={{ maxWidth: "100%", height: "auto", flex: 1, display: "flex" }}
-        loading="lazy"
+        blurDataURL="../assets/img/spinner.svg"
         alt="Image is not available"
+        style={{ maxWidth: "100%", height: "auto", flex: 1, display: "flex" }}
         className="group-hover:opacity-75 duration-300 transition-opacity"
       />
       <div className="px-3 py-1.5 flex flex-col h-full gap-y-1.5 flex-1">

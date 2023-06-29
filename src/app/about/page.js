@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div className="py-6 px-3 ">
-      <div className="max-w-5xl bg-dark_hover px-3 py-1.5 mx-auto rounded-[.2rem] flex items-start justify-center gap-3 flex-col">
+      <div className="max-w-5xl bg-dark_hover p-3 mx-auto rounded-[.2rem] flex items-start justify-center gap-3 flex-col">
         <h2 className="text-xl text-imdb font-bold">About</h2>
 
         <p className="font-medium">
