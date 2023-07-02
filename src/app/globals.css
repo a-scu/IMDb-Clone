@@ -21,7 +21,7 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  background-color: var(--dark-contrast);
+  background-color: var(--dark-gray);
   border-radius: .2rem;
   border:2px solid var(--dark-hover)
 }

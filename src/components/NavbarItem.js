@@ -13,7 +13,7 @@ const NavbarItem = ({ title, param }) => {
   return (
     <Link
       href={`/?genre=${param}`}
-      className={`flex items-center justify-center text-sm font-bold h-8 hover:bg-dark_hover px-3 rounded-[.2rem] cursor-pointer transition-colors duration-300 ease ${
+      className={`flex items-center justify-center text-sm font-bold h-8 min-[270px]:w-auto w-full truncate hover:bg-dark_hover px-3 rounded-[.2rem] cursor-pointer transition-colors duration-300 ease ${
         genre === param ? "text-imdb bg-dark_hover" : "text-white"
       }`}
     >

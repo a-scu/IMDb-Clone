@@ -13,7 +13,7 @@ const HeaderItem = ({ title, href }) => {
     <li>
       <Link
         href={href}
-        className={`flex items-center justify-center text-sm font-bold h-8 hover:bg-dark_hover px-3 rounded-[.2rem] cursor-pointer transition-colors duration-300 ease ${
+        className={`flex items-center bg-dark_contrast justify-center text-sm font-bold h-8 hover:bg-dark_hover px-3 rounded-[.2rem] cursor-pointer transition-colors duration-300 ease ${
           pathname === href ? "text-imdb bg-dark_hover" : "text-white"
         }`}
       >

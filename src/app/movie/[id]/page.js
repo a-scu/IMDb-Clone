@@ -4,16 +4,16 @@ import Image from "next/image";
 
 import { BsHandThumbsUp } from "react-icons/bs";
 
-const Movie = async ({ params }) => {
+const Movie = async ({ params, searchParams }) => {
   const movieId = params.id;
+  const genre = searchParams.genre;
+  const index = searchParams.index;
 
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}&language=en-US`
   );
 
   const movie = await res.json();
-
-  console.log(movie);
 
   return (
     <div className="w-full p-3 pt-6">
@@ -22,7 +22,7 @@ const Movie = async ({ params }) => {
           width={500}
           height={300}
           src={`https://image.tmdb.org/t/p/original/${
-            movie.backdrop_path || movie.poster_path
+            movie.backdrop_path ?? movie.poster_path
           }`}
           placeholder="blur"
           blurDataURL="../assets/img/spinner.svg"
@@ -37,11 +37,16 @@ const Movie = async ({ params }) => {
         />
         <div className="flex flex-col p-3 lg:px-6 gap-3 lg:bg-none bg-dark_gray rounded-[.2rem] lg:rounded-none md:max-w-[750px]">
           <h2 className="text-xl font-extrabold">
-            {movie.title || movie.name}
+            {movie.title ?? movie.name}
           </h2>
-          <p className="font-semibold text-gray-400">{movie.overview}</p>
-          <div className="flex items-center justify-between gap-x-1.5 font-semibold">
-            <p>{movie.release_date || movie.first_air_date}</p>
+          {index && genre && (
+            <p className="font-bold text-imdb">
+              #{index} {genre === "trending" ? "Trending" : "Top Rated"}
+            </p>
+          )}
+          <p className="font-medium text-gray-400">{movie.overview}</p>
+          <div className="flex items-center justify-between gap-x-1.5 font-medium">
+            <p>{movie.release_date ?? movie.first_air_date}</p>
             <div className="flex items-center justify-between gap-x-1.5">
               <p>{movie.vote_count}</p>
               <BsHandThumbsUp />

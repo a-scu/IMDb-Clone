@@ -21,7 +21,15 @@ const page = async ({ searchParams }) => {
 
   if (!res.ok) throw new Error("Failed to fetch data");
 
-  return <div>{!genre ? <Welcome /> : <Results results={results} />}</div>;
+  return (
+    <div>
+      {!genre ? (
+        <Welcome />
+      ) : (
+        <Results results={results} genre={genre} showsIndex={true} />
+      )}
+    </div>
+  );
 };
 
 export default page;
