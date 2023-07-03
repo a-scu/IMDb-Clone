@@ -7,7 +7,7 @@ const About = () => {
         <h2 className="text-xl text-imdb font-bold drop-shadow-md">About</h2>
         <p className="font-medium text-white text-sm">
           "Hi, my name is Alexis Scuderi. I'm a web developer, and this is my
-          Next.js & Tailwind CSS{" "}
+          Next.js & Tailwind CSS
           <a
             target="_blank"
             href="https://www.imdb.com/"
@@ -28,27 +28,27 @@ const About = () => {
         </p>
         <p className="font-medium text-white text-sm">
           So, I wanted to recreate what I think is a nicer-looking home for the
-          famous{" "}
+          famous
           <a
             target="_blank"
             href="https://www.imdb.com/"
             className="font-bold text-imdb"
           >
             IMDb
-          </a>{" "}
+          </a>
           page, which contains a large amount of data on every movie and TV show
           that has ever existed. And just that, because realistically, coding an
           IMDb clone with all its features and information would take years. So,
           I hope you enjoyed my little project, and I invite you to connect with
-          me on{" "}
+          me on
           <a
             target="_blank"
             href="https://www.linkedin.com/in/alexis-scuderi-1234a7279/"
             className="font-bold text-imdb"
           >
             LinkedIn
-          </a>{" "}
-          and{" "}
+          </a>
+          and
           <a
             target="_blank"
             href="https://github.com/a-scu"
