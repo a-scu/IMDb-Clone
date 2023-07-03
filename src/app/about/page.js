@@ -6,8 +6,8 @@ const About = () => {
       <div className="max-w-5xl bg-dark_gray p-3 mx-auto rounded-[.2rem] flex items-start justify-center gap-3 flex-col">
         <h2 className="text-xl text-imdb font-bold drop-shadow-md">About</h2>
         <p className="font-medium text-white text-sm">
-          "Hi, my name is Alexis Scuderi. I'm a web developer, and this is my
-          Next.js & Tailwind CSS
+          Hi, my name is Alexis Scuderi. I&apos;m a web developer, and this is
+          my Next.js & Tailwind CSS
           <a
             target="_blank"
             href="https://www.imdb.com/"
@@ -56,7 +56,7 @@ const About = () => {
           >
             GitHub
           </a>
-          . See you soon!"
+          . See you soon!
         </p>
       </div>
     </div>
