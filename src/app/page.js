@@ -1,12 +1,11 @@
 import React from "react";
 
-import Welcome from "@/components/Welcome";
 import Results from "@/components/Results";
 
 const API_KEY = process.env.API_KEY;
 
 const page = async ({ searchParams }) => {
-  const genre = searchParams.genre;
+  const genre = searchParams.genre || "trending";
 
   const res = await fetch(
     `https://api.themoviedb.org/3/${
@@ -23,11 +22,7 @@ const page = async ({ searchParams }) => {
 
   return (
     <div>
-      {!genre ? (
-        <Welcome />
-      ) : (
-        <Results results={results} genre={genre} showsIndex={true} />
-      )}
+      <Results results={results} genre={genre} showsIndex={true} />
     </div>
   );
 };

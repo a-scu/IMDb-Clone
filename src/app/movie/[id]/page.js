@@ -4,10 +4,8 @@ import Image from "next/image";
 
 import { BsHandThumbsUp } from "react-icons/bs";
 
-const Movie = async ({ params, searchParams }) => {
+const Movie = async ({ params }) => {
   const movieId = params.id;
-  const genre = searchParams.genre;
-  const index = searchParams.index;
 
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}&language=en-US`
@@ -36,16 +34,11 @@ const Movie = async ({ params, searchParams }) => {
           className="rounded-[.2rem] lg:rounded-none md:max-w-[750px] lg:max-w-[640px]"
         />
         <div className="flex flex-col p-3 lg:px-6 gap-3 lg:bg-none bg-dark_gray rounded-[.2rem] lg:rounded-none md:max-w-[750px]">
-          <h2 className="text-xl font-extrabold">
+          <h2 className="text-xl font-extrabold text-white">
             {movie.title ?? movie.name}
           </h2>
-          {index && genre && (
-            <p className="font-bold text-imdb">
-              #{index} {genre === "trending" ? "Trending" : "Top Rated"}
-            </p>
-          )}
           <p className="font-medium text-gray-400">{movie.overview}</p>
-          <div className="flex items-center justify-between gap-x-1.5 font-medium">
+          <div className="flex items-center justify-between gap-x-1.5 font-medium text-white">
             <p>{movie.release_date ?? movie.first_air_date}</p>
             <div className="flex items-center justify-between gap-x-1.5">
               <p>{movie.vote_count}</p>

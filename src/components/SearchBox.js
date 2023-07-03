@@ -30,11 +30,11 @@ const SearchBox = () => {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         placeholder="Search"
-        className="px-1.5 h-full w-full bg-black hover:bg-dark_hover transition-colors duration-300 ease outline-none focus:bg-dark_hover text-sm font-medium sm:px-3 min-w-[54px]"
+        className="px-1.5 h-full w-full bg-black hover:bg-dark_hover text-white transition-colors placeholder:text-gray-400 duration-300 ease outline-none focus:bg-dark_hover text-sm font-medium sm:px-3 min-w-[54px]"
       />
       <button
         type="submit"
-        className="px-3 h-full flex items-center justify-center hover:bg-dark_hover transition-colors duration-300 ease bg-black"
+        className="px-3 h-full flex items-center justify-center hover:bg-dark_hover transition-colors duration-300 ease bg-black text-white"
       >
         <GoSearch />
       </button>
