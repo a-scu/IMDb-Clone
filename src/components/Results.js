@@ -9,6 +9,7 @@ const Results = ({ results, genre, showsIndex }) => {
         {results.map((result, index) => {
           return (
             <Result
+              key={result.id}
               result={result}
               genre={genre}
               index={showsIndex && index + 1}
