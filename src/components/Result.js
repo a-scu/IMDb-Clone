@@ -11,7 +11,7 @@ const Result = ({ result, genre, index }) => {
       href={`/movie/${result.id}/${genre ? `?genre=${genre}` : ""}${
         index ? `&index=${index}` : ""
       }`}
-      key={result.id}
+      key={result.id || index + 1}
       className="cursor-pointer rounded-[.2rem] justify-between overflow-hidden transition-colors duration-300 hover:bg-dark_hover ease bg-dark_gray group min-h-[225px] h-full flex flex-col w-full"
     >
       {result.backdrop_path || result.poster_path ? (
